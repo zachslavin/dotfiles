@@ -1,0 +1,93 @@
+* {
+    background-image: none;
+    font-size: 24px;
+}
+
+@import "mocha.css";
+
+window {
+    /*background-color: transparent;*/
+    background-color: rgba(17, 17, 17, 0.4)
+}
+
+button {
+    color: @overlay0;
+    background-color: @base;
+    outline-style: none;
+    /*border: 1px;*/
+    border-style: solid;
+    border-color: @lavender;
+    border-width: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+    font-family: Hack Nerd Font, monospace;
+
+}
+
+/*button:focus {
+    background-color: @surface1;
+    background-size: 10%;
+}*/
+
+button:hover {
+    background-color: @surface1;
+    background-size: 15%;
+    border-radius: 8px; /* Example for active_rad */
+    border-color: @teal;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+button:hover#lock {
+    border-radius: 8px 8px 8px 8px; /* Example */
+    margin: 10px 10px 10px 100px; /* Example for y_hvr and x_hvr */
+}
+
+button:hover#logout {
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 10px 10px 100px;
+}
+
+button:hover#shutdown {
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 100px 10px 10px;
+}
+
+button:hover#reboot {
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 100px 10px 10px;
+}
+
+#lock {
+    /*background-image: image(url("$HOME/.config/wlogout/icons/lock_@overlay0.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));*/
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+    border-radius: 8px 8px 8px 8px; /* Example for button_rad */
+    margin: 10px 10px 10px 100px; /* Example for y_mgn and x_mgn */
+}
+
+#logout {
+    /*background-image: image(url("$HOME/.config/wlogout/icons/logout_@overlay0.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));*/
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+    border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px; /* Example for button_rad */
+    margin: 10px 10px 10px 100px;
+}
+
+#shutdown {
+    /*background-image: image(url("$HOME/.config/wlogout/icons/shutdown_@overlay0.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));*/
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 100px 10px 10px;
+}
+
+#reboot {
+    /*background-image: image(url("$HOME/.config/wlogout/icons/reboot_@overlay0.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));*/
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px 100px 10px 10px;
+}
